@@ -30,14 +30,26 @@ const typeMessage = () => {
   setTimeout(typeMessage, 100);
 };
 
+const animacion = () => {
+  const luzInicio = document.getElementById('luzInicio');
+  const top = parseInt(window.getComputedStyle(luzInicio).top.replace('px', ''));
+  const left = parseInt(window.getComputedStyle(luzInicio).left.replace('px', ''));
+
+  luzInicio.style.top = `${top + (Math.random() > 0.5 ? 1 : -1)}px`;
+  luzInicio.style.left = `${left + (Math.random() > 0.5 ? 1 : -1)}px`;
+
+  setTimeout(animacion, 200);
+};
+
 onMounted(() => {
   typeMessage();
+  animacion();
 });
 </script>
 
 <template>
     <div class="min-h-[calc(100vh-64px)] flex justify-center items-center relative" id="inicio">
-        <div class="w-10 lg:w-11 h-10 lg:h-11 bg-[#f3900d] rounded-full shadow-ED absolute top-[calc(100vh-91%)] left-[calc(100vw-54.4%)]"></div>
+        <div class="w-10 lg:w-11 h-10 lg:h-11 bg-[#f3900d] rounded-full shadow-ED absolute top-[calc(100vh-91%)] left-[calc(100vw-54.4%)]" id="luzInicio"></div>
         <div class="justify-center items-center z-20">
             <div class="max-w-6xl flex flex-col gap-4 justify-center items-center">
                 <h1 class="text-6xl text-center lg:text-9xl font-bold text-gray-50">EDINSON SANTOS</h1>
@@ -49,22 +61,39 @@ onMounted(() => {
                 </p>
             </div>
         </div>
-        <div class="absolute bottom-0">
-            <a href="#experiencia">
-                <div class="scrolldown">
-                    <div class="chevrons">
-                        <div class="chevrondown"></div>
-                        <div class="chevrondown"></div>
-                    </div>
+        <div @click="scrollToElement('experiencia')" class="absolute bottom-0">
+            <div class="scrolldown">
+                <div class="chevrons">
+                    <div class="chevrondown"></div>
+                    <div class="chevrondown"></div>
                 </div>
-            </a>
+            </div>
         </div>
     </div>
 </template>
 
+<script>
+export default {
+  methods: {
+    scrollToElement(id) {
+      const element = document.getElementById(id);
+      if (element) {
+        // Obtener la posición del elemento
+        const elementTop = element.getBoundingClientRect().top + window.pageYOffset;
+
+        window.scrollTo({
+          top: elementTop - 80,
+          behavior: 'smooth'
+        });
+      }
+    }
+  }
+}
+</script>
+
 <style scoped>
 .shadow-ED {
-    box-shadow: inset 5px -5px 15px 8px #fbbf24, -10px 10px 100px 30px #fbbe24;
+    box-shadow: inset 5px -5px 15px 8px #fbbf24, -10px 10px 110px 30px #fbbe24;
 }
 
 .scrolldown {

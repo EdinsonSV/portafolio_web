@@ -2,7 +2,7 @@
 </script>
 
 <template>
-    <div class="min-h-[calc(100vh-64px)]">
+    <div class="min-h-[calc(100vh-64px)]" id="experiencia">
         <h2 class="text-3xl lg:text-6xl font-bold text-gray-50 text-center py-8 mb-8">EXPERIENCIA</h2>
         <div class="max-w-4xl mx-auto flex justify-center items-center border-[3px] border-gray-400 relative flex-col lg:flex-row">
             <div class="w-full lg:w-1/2 p-6 lg:p-8 flex flex-col gap-4 border-b lg:border-b-0 lg:border-r border-gray-400">
@@ -74,7 +74,7 @@
                     Ingeniero de Software @ Industrias Balinsa
                 </div>
                 <div class="font-bold hidden lg:block">
-                    Enero 2022 - Actualidad
+                    Enero 2023 - Actualidad
                 </div>
             </div>
             <div class="bg-[#241D41] py-4 px-5 rounded-lg text-gray-50 flex gap-4 flex-col-reverse lg:flex-row">
