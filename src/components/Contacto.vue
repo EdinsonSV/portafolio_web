@@ -1,7 +1,22 @@
+<script setup>
+import TagCloud from 'TagCloud';
+import { onMounted, ref } from 'vue';
+const words = ref(['JavaScript', 'Vue', 'PHP', 'Laravel', 'CSS', 'Node.js', 'HTML', 'TypeScript', 'Python', 'Inertia', 'Tailwind', 'Qt']);
+
+onMounted(() => {
+    TagCloud('.tag-cloud', words.value, {
+        radius: 150,
+        maxSpeed: 'normal',
+        initSpeed: 'normal',
+        direction: 45,
+        keep: true,
+    });
+});
+</script>
 <template>
     <div class="max-w-7xl mx-auto py-8 px-8 md:px-16 w-full text-gray-50 flex flex-col gap-8" id="contacto">
-        <div class="flex flex-col lg:flex-row gap-8">
-            <div class="lg:w-1/2 flex flex-col gap-8">
+        <div class="flex flex-col lg:flex-row gap-8 overflow-hidden">
+            <div class="lg:w-1/2 flex flex-col gap-8" data-aos="fade-right">
                 <h3 class="text-3xl font-bold">Disponible para oportunidades</h3>
                 <p class="">¿Tienes un proyecto emocionante con el que necesitas ayuda? ¡Envíame un correo electrónico o contáctame por mensaje instantáneo!</p>
                 <div class="flex gap-4 flex-col">
@@ -14,7 +29,10 @@
                     </ul>
                 </div>
             </div>
-            <div class="lg:w-1/2 flex flex-col gap-4 justify-center">
+            <div class="lg:w-1/2 flex justify-center relative items-center" data-aos="fade-left">
+                <div class="tag-cloud"></div>
+            </div>
+            <!-- <div class="lg:w-1/3 flex flex-col gap-4 justify-start items-center">
                 <h5 class="text-2xl font-bold">Enlaces rápidos</h5>
                 <ul class="flex flex-wrap gap-4">
                     <li @click="scrollToElementTop()" class="py-2 px-4 bg-[#2c35995b] rounded-xl text-xs font-bold cursor-pointer">INICIO</li>
@@ -22,12 +40,12 @@
                     <li @click="scrollToElement('proyectos')" class="py-2 px-4 bg-[#2c35995b] rounded-xl text-xs font-bold cursor-pointer">PROYECTOS</li>
                     <li @click="scrollToElement('contacto')" class="py-2 px-4 bg-[#2c35995b] rounded-xl text-xs font-bold cursor-pointer">CONTACTO</li>
                 </ul>
-            </div>
+            </div> -->
         </div>
         <div class="text-center text-sm font-bold text-gray-500">Copyright © 2024. Todos los derechos reservados.</div>
     </div>
 </template>
-
+<!-- 
 <script>
 export default {
   methods: {
@@ -35,7 +53,7 @@ export default {
       const element = document.getElementById(id);
       if (element) {
         // Obtener la posición del elemento
-        const elementTop = element.getBoundingClientRect().top + window.pageYOffset;
+        const elementTop = element.getBoundingClientRect().top + window.scrollY;
 
         window.scrollTo({
           top: elementTop - 80,
@@ -51,4 +69,4 @@ export default {
     }
   }
 }
-</script>
+</script> -->

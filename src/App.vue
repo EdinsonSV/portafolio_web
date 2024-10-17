@@ -28,11 +28,23 @@ const handleScroll = () => {
 };
 
 onMounted(() => {
-    window.addEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', handleScroll);
+
+    const follower = document.querySelector('.follow');
+
+    document.addEventListener('mousemove', (event) => {
+        const mouseX = event.clientX;
+        const mouseY = event.clientY;
+
+        follower.style.transform = `translate(${mouseX - 16}px, ${mouseY - 16}px)`;
+    });
 })
 </script>
 
 <template>
+    <div class="follow fixed z-[10000] w-8 h-8 rounded-full border-2 border-gray-200 justify-center items-center flex pointer-events-none">
+        <div class="w-2 h-2 bg-gray-400 rounded-full"></div>
+    </div>
     <div @click="scrollToElementTop()" class="fixed bottom-4 right-4 hidden justify-center items-center p-2 bg-blue-700 rounded-xl z-[1000] cursor-pointer" id="flotante">
         <svg class="text-white text-2xl" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M12 21c-1.654 0-3-1.346-3-3v-4.764c-1.143 1.024-3.025.979-4.121-.115a3 3 0 0 1 0-4.242L12 1.758l7.121 7.121a3 3 0 0 1 0 4.242c-1.094 1.095-2.979 1.14-4.121.115V18c0 1.654-1.346 3-3 3M11 8.414V18a1.001 1.001 0 0 0 2 0V8.414l3.293 3.293a1.023 1.023 0 0 0 1.414 0a1 1 0 0 0 0-1.414L12 4.586l-5.707 5.707a1 1 0 0 0 0 1.414a1.023 1.023 0 0 0 1.414 0z"/></svg>
     </div>
@@ -45,7 +57,7 @@ onMounted(() => {
         <header class="bg-[#1B1A1E] sticky top-0 left-0 lg:py-4 pt-4 lg:px-8 md:px-16 z-50" id="topHeader">
             <nav class="flex flex-col justify-between items-center lg:flex-row max-w-7xl m-auto w-full">
                 <div class="flex justify-between items-center w-full px-8 lg:px-0 pb-4 lg:pb-0">
-                    <div class="">
+                    <div class="cursor-pointer" @click="scrollToElementTop()">
                         <img src="/public/IMG/logo_SV.png" alt="imgInicio" class="w-12">
                     </div>
                     <div class="lg:hidden flex">
@@ -109,7 +121,7 @@ export default {
       const element = document.getElementById(id);
       if (element) {
         // Obtener la posición del elemento
-        const elementTop = element.getBoundingClientRect().top + window.pageYOffset;
+        const elementTop = element.getBoundingClientRect().top + window.scrollY;
 
         window.scrollTo({
           top: elementTop - 80,
@@ -121,7 +133,7 @@ export default {
       const element = document.getElementById(id);
       if (element) {
         // Obtener la posición del elemento
-        const elementTop = element.getBoundingClientRect().top + window.pageYOffset;
+        const elementTop = element.getBoundingClientRect().top + window.scrollY;
 
         window.scrollTo({
           top: elementTop - 280,

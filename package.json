@@ -11,6 +11,9 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "aos": "^2.3.4",
+    "tag-cloud": "^2.0.2",
+    "TagCloud": "^2.5.0",
     "vue": "^3.5.10"
   },
   "devDependencies": {

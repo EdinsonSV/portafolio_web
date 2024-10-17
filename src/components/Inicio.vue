@@ -83,8 +83,7 @@ const animacion = () => {
 
     regresar();
   };
-
-  // Iniciar la animación
+  
   moverAleatoriamente();
 };
 

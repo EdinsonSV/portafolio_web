@@ -3,8 +3,8 @@
 
 <template>
     <div class="min-h-[calc(100vh-64px)]" id="experiencia">
-        <h2 class="text-3xl lg:text-6xl font-bold text-gray-50 text-center py-8 mb-8">EXPERIENCIA</h2>
-        <div class="max-w-4xl mx-auto flex justify-center items-center border-[3px] border-gray-400 relative flex-col lg:flex-row">
+        <h2 class="text-3xl lg:text-6xl font-bold text-gray-50 text-center py-8 mb-8" data-aos="fade-up">EXPERIENCIA</h2>
+        <div class="max-w-4xl mx-auto flex justify-center items-center border-[3px] border-gray-400 relative flex-col lg:flex-row" data-aos="fade-up">
             <div class="w-full lg:w-1/2 p-6 lg:p-8 flex flex-col gap-4 border-b lg:border-b-0 lg:border-r border-gray-400">
                 <div class="flex gap-8 items-center">
                     <div class="">
@@ -67,9 +67,9 @@
             </div>
             <img src="/public/IMG/code.webp" alt="" class="lg:w-[60%] -z-10 lef-0 -bottom-[22%] lg:-bottom-[65%] absolute opacity-30">
         </div>
-        <h2 class="text-2xl lg:text-5xl font-bold text-gray-50 text-center py-8 my-8">EXPERIENCIA PROFESIONAL</h2>
+        <h2 class="text-2xl lg:text-5xl font-bold text-gray-50 text-center py-8 my-8" data-aos="fade-up">EXPERIENCIA PROFESIONAL</h2>
         <div class="max-w-3xl w-full mx-auto flex gap-4 flex-col text-sm">
-            <div class="bg-[#740CDC] flex justify-between items-center py-4 px-5 rounded-lg text-poppins text-gray-50">
+            <div class="bg-[#740CDC] flex justify-between items-center py-4 px-5 rounded-lg text-poppins text-gray-50" data-aos="fade-up">
                 <div class="font-semibold">
                     Ingeniero de Software @ Industrias Balinsa
                 </div>
@@ -77,7 +77,7 @@
                     Enero 2023 - Actualidad
                 </div>
             </div>
-            <div class="bg-[#241D41] py-4 px-5 rounded-lg text-gray-50 flex gap-4 flex-col-reverse lg:flex-row">
+            <div class="bg-[#241D41] py-4 px-5 rounded-lg text-gray-50 flex gap-4 flex-col-reverse lg:flex-row" data-aos="fade-up">
                 <div class="flex flex-col gap-4">
                     <div class="flex gap-4 flex-col lg:flex-row">
                         <div class="font-semibold flex gap-2 justify-start items-center"><svg class="text-base text-blue-600" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></g></svg> Piura, Perú</div>
