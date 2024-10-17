@@ -32,13 +32,60 @@ const typeMessage = () => {
 
 const animacion = () => {
   const luzInicio = document.getElementById('luzInicio');
-  const top = parseInt(window.getComputedStyle(luzInicio).top.replace('px', ''));
-  const left = parseInt(window.getComputedStyle(luzInicio).left.replace('px', ''));
 
-  luzInicio.style.top = `${top + (Math.random() > 0.5 ? 1 : -1)}px`;
-  luzInicio.style.left = `${left + (Math.random() > 0.5 ? 1 : -1)}px`;
+  const originalTop = parseInt(window.getComputedStyle(luzInicio).top.replace('px', ''));
+  const originalLeft = parseInt(window.getComputedStyle(luzInicio).left.replace('px', ''));
 
-  setTimeout(animacion, 200);
+  let steps = 20;
+  let currentStep = 0;
+
+  const maxDesplazamiento = 40; 
+
+  const moverAleatoriamente = () => {
+    if (currentStep < steps) {
+      const top = parseInt(window.getComputedStyle(luzInicio).top.replace('px', ''));
+      const left = parseInt(window.getComputedStyle(luzInicio).left.replace('px', ''));
+
+      let newTop = top + (Math.random() > 0.5 ? maxDesplazamiento / steps : -maxDesplazamiento / steps);
+      let newLeft = left + (Math.random() > 0.5 ? maxDesplazamiento / steps : -maxDesplazamiento / steps);
+
+      luzInicio.style.top = `${newTop}px`;
+      luzInicio.style.left = `${newLeft}px`;
+
+      currentStep++;
+      setTimeout(moverAleatoriamente, 100);
+    } else {
+      regresarAPosicionOriginal(steps);
+    }
+  };
+
+  const regresarAPosicionOriginal = (stepsRegreso) => {
+    let step = 0;
+
+    const regresar = () => {
+      if (step < stepsRegreso) {
+        const top = parseInt(window.getComputedStyle(luzInicio).top.replace('px', ''));
+        const left = parseInt(window.getComputedStyle(luzInicio).left.replace('px', ''));
+
+        let newTop = top + (originalTop - top) / (stepsRegreso - step);
+        let newLeft = left + (originalLeft - left) / (stepsRegreso - step);
+
+        luzInicio.style.top = `${newTop}px`;
+        luzInicio.style.left = `${newLeft}px`;
+
+        step++;
+        setTimeout(regresar, 100);
+      } else {
+        currentStep = 0;
+        setTimeout(moverAleatoriamente, 100);
+      }
+    };
+
+    regresar();
+  };
+
+  // Iniciar la animación
+  moverAleatoriamente();
 };
 
 onMounted(() => {
@@ -49,7 +96,7 @@ onMounted(() => {
 
 <template>
     <div class="min-h-[calc(100vh-64px)] flex justify-center items-center relative" id="inicio">
-        <div class="w-10 lg:w-11 h-10 lg:h-11 bg-[#f3900d] rounded-full shadow-ED absolute top-[calc(100vh-91%)] left-[calc(100vw-54.4%)]" id="luzInicio"></div>
+        <div class="w-10 lg:w-11 h-10 lg:h-11 bg-[#f3900d] duration-75 rounded-full shadow-ED absolute top-[calc(100vh-91%)] left-[calc(100vw-54.4%)]" id="luzInicio"></div>
         <div class="justify-center items-center z-20">
             <div class="max-w-6xl flex flex-col gap-4 justify-center items-center">
                 <h1 class="text-6xl text-center lg:text-9xl font-bold text-gray-50">EDINSON SANTOS</h1>
