@@ -58,7 +58,7 @@ onMounted(() => {
             <nav class="flex flex-col justify-between items-center lg:flex-row max-w-7xl m-auto w-full">
                 <div class="flex justify-between items-center w-full px-8 lg:px-0 pb-4 lg:pb-0">
                     <div class="cursor-pointer" @click="scrollToElementTop()">
-                        <img src="/public/IMG/logo_SV.png" alt="imgInicio" class="w-12">
+                        <img src="/public/IMG/logo_SV.png" alt="logo_SV.png" class="w-12">
                     </div>
                     <div class="lg:hidden flex">
                         <svg v-if="!toogle" @click="toogle = true" class="text-white text-3xl" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5L12 12L19 5M12 12H12M5 19L12 12L19 19"><animate fill="freeze" attributeName="d" dur="0.2s" values="M5 5L12 12L19 5M12 12H12M5 19L12 12L19 19;M5 5L12 5L19 5M5 12H19M5 19L12 19L19 19"/></path></svg>
@@ -108,7 +108,7 @@ onMounted(() => {
             <Proyectos />
         </div>
         
-        <div class="w-full bg-[#0c1018]">
+        <div class="w-full bg-[#0c1018] mt-8">
             <Contacto />
         </div>
     </div>

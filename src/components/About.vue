@@ -8,7 +8,7 @@
             <div class="w-full lg:w-1/2 p-6 lg:p-8 flex flex-col gap-4 border-b lg:border-b-0 lg:border-r border-gray-400">
                 <div class="flex gap-8 items-center">
                     <div class="">
-                        <img src="/public/IMG/webIMG.png" alt="" class="w-10 h-10 img">
+                        <img src="/public/IMG/webIMG.png" alt="webIMG.png" class="w-10 h-10 img">
                     </div>
                     <div class="text-gray-200 relative flex flex-col justify-center lg:text-[26px] text-[22px] font-bold">
                         <h2 class="z-10 leading-[26px] tracking-tight">Full-Stack Dev<br>Laravel, Vue</h2>
@@ -41,7 +41,7 @@
             <div class="w-full lg:w-1/2 p-6 lg:p-8 flex flex-col gap-4 border-t lg:border-t-0 lg:border-l border-gray-400">
                 <div class="flex gap-8 items-center">
                     <div class="">
-                        <img src="/public/IMG/pythonIMG.png" alt="" class="w-10 h-10 img">
+                        <img src="/public/IMG/pythonIMG.png" alt="pythonIMG.png" class="w-10 h-10 img">
                     </div>
                     <div class="text-gray-200 relative flex flex-col justify-center lg:text-[26px] text-[22px] font-bold">
                         <h2 class="z-10 leading-[26px] tracking-tight">Desktop Dev<br>Python, Qt</h2>
@@ -65,7 +65,7 @@
                     </div>
                 </div>
             </div>
-            <img src="/public/IMG/code.webp" alt="" class="lg:w-[60%] -z-10 lef-0 -bottom-[22%] lg:-bottom-[65%] absolute opacity-30">
+            <img src="/public/IMG/code.webp" alt="code.webp" class="lg:w-[60%] -z-10 lef-0 -bottom-[22%] lg:-bottom-[65%] absolute opacity-30">
         </div>
         <h2 class="text-2xl lg:text-5xl font-bold text-gray-50 text-center py-8 my-8" data-aos="fade-up">EXPERIENCIA PROFESIONAL</h2>
         <div class="max-w-3xl w-full mx-auto flex gap-4 flex-col text-sm">
@@ -74,7 +74,7 @@
                     Ingeniero de Software @ Industrias Balinsa
                 </div>
                 <div class="font-bold hidden lg:block">
-                    Enero 2023 - Actualidad
+                    Enero 2023 - Octubre 2024
                 </div>
             </div>
             <div class="bg-[#241D41] py-4 px-5 rounded-lg text-gray-50 flex gap-4 flex-col-reverse lg:flex-row" data-aos="fade-up">
