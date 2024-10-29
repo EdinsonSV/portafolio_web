@@ -16,9 +16,9 @@ const closeModal = () => {
   selectedProject.value = null;
 };
 
-const project1Images = ['/public/IMG/avicolasaucedo.com.png', '/public/IMG/avicolasaucedo_Escritorio.png'];
-const project2Images = ['/public/IMG/avicolabrialemagisac.com.png', '/public/IMG/avicolabrialemagisac_Escritorio.png'];
-const project3Images = ['/public/IMG/seacorp.balinsa.com.png', '/public/IMG/seacorp.balinsa_Escritorio.png'];
+const project1Images = ['/IMG/avicolasaucedo.com.png', '/IMG/avicolasaucedo_Escritorio.png'];
+const project2Images = ['/IMG/avicolabrialemagisac.com.png', '/IMG/avicolabrialemagisac_Escritorio.png'];
+const project3Images = ['/IMG/seacorp.balinsa.com.png', '/IMG/seacorp.balinsa_Escritorio.png'];
 </script>
 
 <template>
@@ -29,7 +29,7 @@ const project3Images = ['/public/IMG/seacorp.balinsa.com.png', '/public/IMG/seac
                 <CompanyCard
                     name="INVERSIONES SAUCEDO PERU E.I.R.L."
                     ruc="20601646944"
-                    imgSrc="/public/IMG/avicolasaucedo.com.png"
+                    imgSrc="/IMG/avicolasaucedo.com.png"
                     imgAlt="avicolasaucedo.com"
                     :modalId="1"
                     @openModal="openModal"
@@ -37,7 +37,7 @@ const project3Images = ['/public/IMG/seacorp.balinsa.com.png', '/public/IMG/seac
                 <CompanyCard
                     name="BRIALEMAGI SOCIEDAD ANONIMA CERRADA"
                     ruc="20612079065"
-                    imgSrc="/public/IMG/avicolabrialemagisac.com.png"
+                    imgSrc="/IMG/avicolabrialemagisac.com.png"
                     imgAlt="avicolabrialemagisac.com"
                     :modalId="2"
                     @openModal="openModal"
@@ -45,7 +45,7 @@ const project3Images = ['/public/IMG/seacorp.balinsa.com.png', '/public/IMG/seac
                 <CompanyCard
                     name="SEACORP PERU S.A.C."
                     ruc="20506548188"
-                    imgSrc="/public/IMG/seacorp.balinsa.com.png"
+                    imgSrc="/IMG/seacorp.balinsa.com.png"
                     imgAlt="seacorp.balinsa.com"
                     :modalId="3"
                     @openModal="openModal"
@@ -73,7 +73,7 @@ const project3Images = ['/public/IMG/seacorp.balinsa.com.png', '/public/IMG/seac
                 
                 <ModalProject v-if="selectedProject === 1" 
                     :images="project1Images" 
-                    phoneImage="/public/IMG/telefono_avicolasaucedo.com.png" 
+                    phoneImage="/IMG/telefono_avicolasaucedo.com.png" 
                     nombreEmpresa = "INVERSIONES SAUCEDO PERU E.I.R.L."
                     url="avicolasaucedo.com"
                     ruc = "20601646944"
@@ -84,7 +84,7 @@ const project3Images = ['/public/IMG/seacorp.balinsa.com.png', '/public/IMG/seac
                 />
                 <ModalProject v-if="selectedProject === 2" 
                     :images="project2Images" 
-                    phoneImage="/public/IMG/telefono_avicolaBrialemagisac.com.png" 
+                    phoneImage="/IMG/telefono_avicolabrialemagisac.com.png" 
                     nombreEmpresa = "BRIALEMAGI SOCIEDAD ANONIMA CERRADA"
                     url="avicolabrialemagisac.com"
                     ruc = "20612079065"
@@ -95,7 +95,7 @@ const project3Images = ['/public/IMG/seacorp.balinsa.com.png', '/public/IMG/seac
                 />
                 <ModalProject v-if="selectedProject === 3" 
                     :images="project3Images" 
-                    phoneImage="/public/IMG/telefono_seacorp.balinsa.com.png" 
+                    phoneImage="/IMG/telefono_seacorp.balinsa.com.png" 
                     nombreEmpresa = "SEACORP PERU S.A.C."
                     url="seacorp.balinsa.com"
                     ruc = "20506548188"
